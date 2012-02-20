@@ -445,7 +445,7 @@ var BW = {
 					};
 					
 					// Let's actually run the request! Gawd.
-					$.post(ajax_data);
+					$.ajax(ajax_data);
 				}
 				
 				// Alright, we'll store it in the lastCommand variable in case any developers wish to use it ;)
