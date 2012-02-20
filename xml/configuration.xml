@@ -81,7 +81,7 @@
 			<width>600</width>
 			<height>300</height>
 			<title>About Black Widow 1.0.5</title>
-			<html><h2>About Black Widow 1.0.5</h2><p>Black Window is part of a "command based social network" that is being developed by five software engineers. Our names are <a href="http://www.bilawal.co.uk" target="_blank">Bilawal Hameed</a>, Charlie Brensinger, Alejandro Sauze Saucedo, Ivan Smyrnov and Sari Ghamloush.</p><p class="small">This program comes with ABSOLUTELY NO WARRANTY; This is free software, and you are welcome to redistribute it under certain conditions. Copyright 2012.</p></html>
+			<html><h2>About Black Widow 1.0.5</h2><p>Black Window is part of a "command based social network" that is being developed by five software engineers. Our names are <a href="http://www.bilawal.co.uk" target="_blank">Bilawal Hameed</a>, Charlie Brensinger, Alejandro Sauze Saucedo, Anton Smyrnov and Sari Ghamloush.</p><p class="small">This program comes with ABSOLUTELY NO WARRANTY; This is free software, and you are welcome to redistribute it under certain conditions. Copyright 2012.</p></html>
 		</item>
 	</pages>
 	<!-- END PAGES -->
