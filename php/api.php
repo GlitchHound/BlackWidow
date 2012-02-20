@@ -24,8 +24,8 @@
 // command_text would show the string entered in the console i.e. 'cd /website'
 // command_time would show the time it was sent by the browser (compare against time() to see any lag)
 // command_version would show the version the JS engine is (for compatibility)
-$command_text = $_SERVER['HTTP_X_BW_COMMAND'];
-$command_time = $_SERVER['HTTP_X_BW_TIMESTAMP'];
-$command_version = $_SERVER['HTTP_X_BW_VERSION'];
+$command_text = $_GET['HTTP_X_BW_COMMAND'];
+$command_time = $_GET['HTTP_X_BW_TIMESTAMP'];
+$command_version = $_GET['HTTP_X_BW_VERSION'];
 
 echo "The command you sent to the server was '". $command_text ."'";

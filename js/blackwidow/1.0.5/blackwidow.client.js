@@ -424,10 +424,10 @@ var BW = {
 						url: BW.metadata.endpoint, // The URL endpoint of where to send the request
 						cache: false, // No no, we don't ever want to cache this!
 						dataType: 'html', // It's definitely html
-						headers: {
-							'X_BW_COMMAND': command, // This sends by a header the command
-							'X_BW_TIMESTAMP': Math.round((new Date()).getTime() / 1000), // This sends the timestamp
-							'X_BW_VERSION': BW.version // Send over the version of the BW JavaScript too!
+						data: {
+							'HTTP_X_BW_COMMAND': command, // This sends by a header the command
+							'HTTP_X_BW_TIMESTAMP': Math.round((new Date()).getTime() / 1000), // This sends the timestamp
+							'HTTP_X_BW_VERSION': BW.version // Send over the version of the BW JavaScript too!
 						},
 						success: function(data) {
 							// Once it's successful, let's print it to the browser
@@ -445,7 +445,7 @@ var BW = {
 					};
 					
 					// Let's actually run the request! Gawd.
-					$.ajax(ajax_data);
+					$.post(ajax_data);
 				}
 				
 				// Alright, we'll store it in the lastCommand variable in case any developers wish to use it ;)
