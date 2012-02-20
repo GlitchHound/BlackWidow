@@ -1,0 +1,123 @@
+<!-- 
+/*************************************
+
+	BlackWidow is a command-based interface for a social network.
+    Copyright © 2012 Bilawal Hameed, Alejandro Sauze Saucedo, Charlie Brensinger, Anton Smyrnov, Sari Ghamloush
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+*************************************/
+-->
+<blackwidow>
+	<!-- This can contain either commands to run, or if they contain HTML then it will add it to the console output -->
+	<welcome>
+		<item><h2>Welcome to Black Widow 1.0.5</h2></item>
+		<item><h4>This is still in pre-alpha mode, so we please advise you to take caution when using this engine. We've spent a lot of time in it, and at this stage, we would really appreciate your contribution to our engine on Github (see at http://github.com/glitchhound/blackwidow)</h4></item>
+	</welcome>
+	
+	<version>1.0.5</version>
+	
+	<!-- START ALIASES -->
+	<!-- to add an alias, put it in the <aliases> -->
+	<aliases>
+		
+		<item><!-- <item> is for a new alias -->
+			<name>?</name><!-- <name> is the name of the alias it creates -->
+			<redirect>help</redirect><!-- And <redirect> is where the <name> points to if written in the CLI -->
+		</item>
+		
+		<item>
+			<name>clr</name>
+			<redirect>clear</redirect>
+		</item>
+		
+		<item>
+			<name>reg</name>
+			<redirect>register</redirect>
+		</item>
+		
+	</aliases>
+	<!-- END ALIASES -->
+	
+	<!-- START PAGES -->
+	<pages>
+		<global>
+			<!-- The <template> tag is wrapped around page items which have the <type>external</type> tag -->
+			<!-- The <template> internal does not need the <html> tag as it is wrapped around afterwards anyway -->
+			<template>
+				<head>
+					<title>%title%</title>
+					<style type="text/css">
+						body { background:#222; font-family:'Helvetica Neue', 'Helvetica', 'Arial', 'Sans serif' !important; color:#fff; padding:5px; }
+						#e-container { padding:5px; background:#333; border-radius:10px; }
+						h1, h2, h3, h4, h5, h6, p { margin:0; }
+						h2 { font-size:30px; }
+						p { line-height:24px; color:#ccc; }
+						p a { color:#ccc; }
+						p.small { line-height:14px; padding-top:15px; font-size:10px; }
+					</style>
+				</head>
+				<body onblur="javascript:this.window.close();">
+					<div id="container">
+					%content%
+					</div>
+				</body>
+			</template>
+		</global>
+		<item>
+			<name>about</name>
+			<type>external</type>
+			<width>600</width>
+			<height>300</height>
+			<title>About Black Widow 1.0.5</title>
+			<html><h2>About Black Widow 1.0.5</h2><p>Black Window is part of a "command based social network" that is being developed by five software engineers. Our names are <a href="http://www.bilawal.co.uk" target="_blank">Bilawal Hameed</a>, Charlie Brensinger, Alejandro Sauze Saucedo, Ivan Smyrnov and Sari Ghamloush.</p><p class="small">This program comes with ABSOLUTELY NO WARRANTY; This is free software, and you are welcome to redistribute it under certain conditions. Copyright 2012.</p></html>
+		</item>
+	</pages>
+	<!-- END PAGES -->
+	
+	
+	<!-- START HELP -->
+	<help>
+		<item>
+			<name>about</name>
+			<text>Tells you about our company, culture and background behind Black Widow.</text>
+		</item>
+		<item>
+			<name>cd</name>
+			<text>This allows you to navigate through different directories.</text>
+		</item>
+		<item>
+			<name>register</name>
+			<text>This allows you to register on Black Widow's platform.</text>
+		</item>
+		<item>
+			<name>login</name>
+			<text>Please enter the username and password you registered with</text>
+		</item>
+		<item>
+			<name>help</name>
+			<text>This provides help with things in the console.</text>
+		</item>
+		<item>
+			<name>clear</name>
+			<text>Clears the screen</text>
+		</item>
+		<item>
+			<name>ls</name>
+			<text>This shows the current files in the directory for the user</text>
+		</item>
+	</help>
+	<!-- END HELP -->
+	
+</blackwidow>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Black Widow</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+  
+	<div id="indicators">
+		<span id="alt-indicator">Alt-</span>
+		<span id="ctrl-indicator">Ctrl-</span>
+		<span id="scroll-indicator">SCR LOCK</span>
+	</div>
+	
+	<div id="screen">
+		<div id="display">
+			<div id="welcome"></div>
+			
+			<noscript>
+				<p>STOP!, CLI requires JavaScript to work. Turn on JavaScript to use the Black Widow CLI.</p>
+			</noscript>
+		</div>
+	
+<div id="bottomline"><span id="inputline"><span id="prompt"></span><span id="lcommand"></span><span id="cursor" >&nbsp;</span><span id="rcommand"></span></span><span id="spinner"></span></div>
+	</div>
+
+  <!-- script type="text/javascript" src="js/core/uncompressed/jquery.js"></script>
+  <script type="text/javascript" src="js/core/uncompressed/jquery.browser.js"></script>
+  <script type="text/javascript" src="js/core/uncompressed/jquery.konami.js"></script>
+  <script type="text/javascript" src="js/core/uncompressed/jquery.hotkeys.js"></script>
+  <script type="text/javascript" src="js/core/uncompressed/jquery.base64.js"></script -->
+  <script type="text/javascript" src="js/core/all.min.js"></script>
+  <script type="text/javascript" src="js/blackwidow/1.0.5/blackwidow.client.min.js"></script>
+  <script> BW.init({ url: 'php/api.php', xmlurl: 'xml/configuration.xml' }); </script>
+</body>
+</html>

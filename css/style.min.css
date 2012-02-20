@@ -1,0 +1,21 @@
+/*************************************
+
+	BlackWidow is a command-based interface for a social network.
+    Copyright © 2012 Bilawal Hameed, Alejandro Sauze Saucedo, Charlie Brensinger, Anton Smyrnov, Sari Ghamloush
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+*************************************/
+
+html,body{height:99%}body{background:#000;font-family:"Courier New",Courier,monospace;margin:0 15px;overflow:hidden;padding:0}pre,td,th,p,div{color:#FFF;font-family:"Courier New",Courier,monospace;font-size:1em}div#screen{height:99%;margin:2px;overflow:hidden;padding:0}div,table{margin-bottom:1em;margin-top:0}code,p,span,td,th{font-size:1em}p,div#display,ul{margin:0}div#screen p,div#screen span,div#screen a{white-space:pre-wrap}div#screen p.error{color:red}div#screen li{list-style:none}div#welcome{display:none}h3{color:#FFF;margin:5px 0;text-decoration:underline}h4,h5,h6{margin:0;text-decoration:none}a,a:visited,.linky{color:#FFF;cursor:pointer;font-weight:700;text-decoration:none}table{border-collapse:collapse}td{padding:0 1em}.stealth{background:#000;border:0;color:#000;height:0;width:0}#cursor{background:#FFF;color:#000;font-weight:400}div#pagealert{background:#FFF;bottom:2px;color:#000;left:2px;margin:0;padding:0;position:absolute;text-align:center;visibility:hidden;width:auto}div#indicators{bottom:2px;left:2px;margin:0;padding:0;position:absolute;text-align:center}div#indicators span{background:#FFF;color:#000;display:none}#spinner{display:none;font-weight:700;line-height:0;margin-left:1em;padding:0}div#cform{height:1px;left:0;position:absolute;top:0;width:1px}img{color:#FFF;font-size:x-small}img.comic{background:#FFF;padding:5px}iframe{border:none;margin:0}div.browser{margin:5px 2px;outline:2px solid gray}form#searchform input[type=text]{background:#000;border:1px solid #FFF;color:#FFF;font-family:"Courier New",Courier,monospace;width:100px}form#searchform input[type=submit]{background:#FFF;border:1px solid #000;color:#000;font-family:"Courier New",Courier,monospace;font-size:1em}div#credit{bottom:0;color:#FFF;font-size:xx-small;position:absolute}div#credit a{font-size:xx-small;text-decoration:underline}h1,h2,a:hover,span.linky:hover,td.linky:hover{color:#fff}
