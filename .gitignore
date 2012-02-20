@@ -1,0 +1,6 @@
+##################################
+# This ignores unnecessary files for other developers #
+##################################
+.DS_Store
+dotcloud.yml
+nginx.conf
