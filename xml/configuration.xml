@@ -1,5 +1,4 @@
-<!-- 
-/*************************************
+<!-- /*************************************
 
 	BlackWidow is a command-based interface for a social network.
     Copyright © 2012 Bilawal Hameed, Alejandro Sauze Saucedo, Charlie Brensinger, Anton Smyrnov, Sari Ghamloush
@@ -17,21 +16,21 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-*************************************/
--->
+*************************************/ -->
 <blackwidow>
 	<!-- This can contain either commands to run, or if they contain HTML then it will add it to the console output -->
 	<welcome>
-		<item><h2>Welcome to Black Widow 1.0.5</h2></item>
-		<item><h4>This is still in pre-alpha mode, so we please advise you to take caution when using this engine. We've spent a lot of time in it, and at this stage, we would really appreciate your contribution to our engine on Github (see at http://github.com/glitchhound/blackwidow)</h4></item>
+		<item><h2>Welcome to Black Widow 1.0.6</h2></item>
+		<item><h4>This is still in pre-alpha mode! Contribute to this on github (see at http://github.com/glitchhound/blackwidow)</h4></item>
 	</welcome>
 	
+	<!-- Do not touch this unless you know what your doing -->
 	<version>1.0.6</version>
 	
-	<!-- START ALIASES -->
-	<!-- to add an alias, put it in the <aliases> -->
+	<!-- START ALIASES [to add an alias, put it in the <aliases>] -->
 	<aliases>
 		
+		<!-- Usage: <[what_tag]>[redirect_to]</[what_tag]> -->
 		<clr>clear</clr>
 		<reg>register</reg>
 		
@@ -44,12 +43,13 @@
 			<!-- The <template> tag is wrapped around page items which have the <type>external</type> tag -->
 			<!-- The <template> internal does not need the <html> tag as it is wrapped around afterwards anyway -->
 			<template>
+				<!-- start template -->
 				<html>
 				<head>
 					<title>%title%</title>
 					<style type="text/css">
 						body { background:#222; font-family:'Helvetica Neue', 'Helvetica', 'Arial', 'Sans serif' !important; color:#fff; padding:5px; }
-						#e-container { padding:5px; background:#333; border-radius:10px; }
+						/*#*/container { padding:5px; background:#333; border-radius:10px; }
 						h1, h2, h3, h4, h5, h6, p { margin:0; }
 						h2 { font-size:30px; }
 						p { line-height:24px; color:#ccc; }
@@ -63,15 +63,16 @@
 					</div>
 				</body>
 				</html>
+				<!-- end template -->
 			</template>
 		</global>
 		<item>
-			<name>about</name>
-			<type>external</type>
-			<width>600</width>
-			<height>220</height>
-			<title>About Black Widow 1.0.5</title>
-			<body><h2>About Black Widow 1.0.5</h2><p>Black Window is part of a "command based social network" that is being developed by five software engineers. Our names are <a href="http://www.bilawal.co.uk" target="_blank">Bilawal Hameed</a>, Charlie Brensinger, Alejandro Sauze Saucedo, Anton Smyrnov and Sari Ghamloush.</p><p class="small">This program comes with ABSOLUTELY NO WARRANTY; This is free software, and you are welcome to redistribute it under certain conditions. Copyright 2012.</p></body>
+			<name>about</name> <!-- The tag - i.e. this would work with the console entry "about" -->
+			<type>external</type> <!-- Can either be an internal (shows in console), external (shows in iframe), external_popup (pops up in a new window) -->
+			<width>600</width> <!-- What width the window should be (only works with external or external_popup) -->
+			<height>220</height> <!-- What height the window should be (only works with external or external_popup) -->
+			<title>About Black Widow 1.0.5</title> <!-- The title of the page (only works with external_popup) -->
+			<body><h2>About Black Widow 1.0.5</h2><p>Black Window is part of a "command based social network" that is being developed by five software engineers. Our names are <a href="http://www.bilawal.co.uk" target="_blank">Bilawal Hameed</a>, Charlie Brensinger, Alejandro Sauze Saucedo, Anton Smyrnov and Sari Ghamloush.</p><p class="small">This program comes with ABSOLUTELY NO WARRANTY; This is free software, and you are welcome to redistribute it under certain conditions. Copyright 2012.</p></body> <!-- The html contents of the page item -->
 		</item>
 	</pages>
 	<!-- END PAGES -->
@@ -79,6 +80,7 @@
 	
 	<!-- START HELP -->
 	<help>
+		<!-- Usage: <[help_tag]>[description]</[help_tag]> -->
 		<about>Tells you about our company, culture and background behind Black Widow.</about>
 		<cd>This allows you to navigate through different directories.</cd>
 		<register>This allows you to register on Black Widow's platform.</register>

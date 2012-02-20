@@ -1,22 +1,3 @@
-/*
-@desc
-	Base64 encoder and decoder write by JavaScript. This code was a plugin of 
-	jQeury, you must load jQuery library first if you want to use this code.
-	 - After encode, you can decode it with PHP, and vice versa
-	 - Support Unicode library, but only worked on chinese
-	This code was collected from the network, I just rewrite it as the plugin 
-	of jQuery, the copyright belongs to original work(s).
-
-@Version	1.1 build 20110323
-@Author	Hpyer <coolhpy@163.com>
-@Home	http://hpyer.cn/codes/jquery-plugin-base64-encode-and-decode
-@Usage
-	Use UNICODE library or not: $.base64.is_unicode = false/true;
-	Encode: $.base64.encode('$.base64');
-	Decode: $.base64.decode('JC5iYXNlNjQ=');
-@License	Free
-*/
-
 jQuery.base64 = {
 	is_unicode: false,
 
