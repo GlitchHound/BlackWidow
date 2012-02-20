@@ -1,0 +1,5 @@
+1.0.6 - Released 20th February 2012
+> Fixed bugs with the engine
+> XML Configuration Improvements
+> all.min.js now goes in the compressed folder
+> Appropriate dependency copyrights placed

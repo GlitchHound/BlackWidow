@@ -22,7 +22,7 @@
 var BW = {
 
 	/* BW.version shows the internal version to support future compatibility */
-	version: '1.0.5',
+	version: '1.0.6',
 	
 	/* This is if you wish to change the text of certain displays into another language or in a different form.
 		% has been configured in certain text items that processes specific data. See the area they're used to change them. */
@@ -82,7 +82,7 @@ var BW = {
 		},
 		
 		/* These are only used once the script is running, so please, do not touch them unless you know exactly what your doing. */
-		aliases: {}, pages: {}, help: {}, lastCommand: '',
+		aliases: {}, pages: {}, help: { '?' : 'help' }, lastCommand: '',
 		
 		/* This is the metadata for the Terminal. These do not need editing and are only used to process the terminal. Do NOT edit. */
 		terminalconfig: {
@@ -287,9 +287,9 @@ var BW = {
 					}
 					
 					// BW processes the aliases in the XML file
-					$object.find('aliases item').each(function(obj){
-						var name = $(this).find('name').text(); // Let's pull up the name
-						var redirect = $(this).find('redirect').text(); // Let's pull up the direct
+					$object.find('aliases').children().each(function(obj){
+						var name = $(this).get(0).tagName; // Let's pull up the name
+						var redirect = $(this).text(); // Let's pull up the new tag
 						BW.metadata.aliases[name] = redirect; // Store it in script memory
 					});
 					
@@ -297,7 +297,7 @@ var BW = {
 					$object.find('pages item').each(function(obj){
 						var name = $(this).find('name').text(); // Let's pull up the name
 						BW.metadata.pages[name] = {
-							output: $(this).find('html').outerHTML(), // The html
+							output: $(this).find('body').outerHTML(), // The html
 							title: $(this).find('title').text(), // The title
 							width: $(this).find('width').text() || 600, // The width if one's in XML, if not, then 600 by default
 							height: $(this).find('height').text() || 200, // The height if one's in XML, if not, then 200 by default
@@ -317,9 +317,9 @@ var BW = {
 					});
 					
 					/* BW processes the help tags in the XML file */
-					$object.find('help item').each(function(obj){
-						var name = $(this).find('name').text(); // Let's pull up the name
-						var text = $(this).find('text').text(); // Let's pull up the text
+					$object.find('help').children().each(function(obj){
+						var name = $(this).get(0).tagName; // Let's pull up the name
+						var text = $(this).text(); // Let's pull up the text
 						BW.metadata.help[name] = text; //Store it in memory
 					});
 					
@@ -438,6 +438,7 @@ var BW = {
 							} catch(e) {
 								BW.terminal.print(data);
 							}
+							BW.metadata.lastCommand = command;
 						},
 						error: function(data) {
 							BW.terminal.print(BW.functions.error(BW.text['console_error']));
