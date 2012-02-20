@@ -10,6 +10,8 @@ The system works in the current structure: frontend -> xml -> backend
 We've built it intelligently to try and avoid requests where necessary, so you can make pages that are rendered in-browser through the xml/configuration.xml file. If there's nothing found through the configuration.xml file then the engine will send the request to the server where it may process and offer some server-side response that may be what the user's looking for.
 
 Here's some notes:
+
+*   Red
 *   <aliases> simply route a request (i.e. a alias from "test" to "other" will do so accordingly)
 *   php/api.php is an empty php page that contains the command data sent by the JS engine
 *   BW.init() is needed to run the engine once the js/core/ and js/blackwidow has been loaded
