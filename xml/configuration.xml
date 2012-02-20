@@ -26,7 +26,7 @@
 		<item><h4>This is still in pre-alpha mode, so we please advise you to take caution when using this engine. We've spent a lot of time in it, and at this stage, we would really appreciate your contribution to our engine on Github (see at http://github.com/glitchhound/blackwidow)</h4></item>
 	</welcome>
 	
-	<version>1.0.5</version>
+	<version>1.0.5.1</version>
 	
 	<!-- START ALIASES -->
 	<!-- to add an alias, put it in the <aliases> -->
